@@ -1,9 +1,10 @@
 <html>
 <head>
-    <title>Comanda</title>
+    <title>Recibo</title>
+
 </head>
 <body>
-<h1>Comanda</h1>
+<h1>Tu pedido</h1>
 
 
 <form action="comandav.php">

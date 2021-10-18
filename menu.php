@@ -12,5 +12,9 @@
         <br><br>
         <input type="submit" name="boton" value="Inicio">
     </form>
+
+    <?php
+    echo "menu";
+    ?>
 </body>
 </html>

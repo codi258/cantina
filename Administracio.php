@@ -12,5 +12,8 @@
     <br><br>
     <input type="submit" name="boton" value="Historial">
 </form>
+<?php
+echo "Admin";
+?>
 </body>
 </html>
