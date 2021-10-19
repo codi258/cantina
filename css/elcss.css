@@ -4,12 +4,34 @@ header{
     background-color: aqua;
     padding: 20px;
     font-size: 20px;
-    text-align: center;
 }
+
 footer{
     background-color: aqua;
     padding: 20px;
     font-size: 20px;
-    text-align: center;
 }
 
+img{
+    width: 20%;
+}
+
+
+.imag{
+    width: 650px;
+    display: flex;
+}
+.left{
+    display: flex;
+    text-align: left;
+    width: 300px;
+}
+.mid{
+    width: 500;
+    display: flex;
+    text-align: left;
+}
+.flex{
+    display: flex;
+    border: black solid 2px;
+}
