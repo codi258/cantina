@@ -9,26 +9,57 @@
             require_once("Header.php");
         ?>
     </header>
+
+
+    <form id='mati'>
+
     <?php
-    // Get the contents of the JSON file
-    $bocatas = file_get_contents("../jsons/menuMati.json");
-    // Convert to array
-    $arrayBocatas = json_decode($bocatas, true);
-    //var_dump($arrayBocatas); // print array
+    $bocatasMati = file_get_contents("../jsons/menuMati.json");
+    $arrayBocatasMati = json_decode($bocatasMati, true);
+    foreach ($arrayBocatasMati as $key => $value){
+        $nom = $arrayBocatasMati[$key]["nom"];
+        $preu = $arrayBocatasMati[$key]["preu"];
+        $ruta = $arrayBocatasMati[$key]["ruta"];
 
-
-    foreach ($arrayBocatas as $key => $value){
-        $nom = $arrayBocatas[$key]["nom"];
-        $preu = $arrayBocatas[$key]["preu"];
-        $ruta = $arrayBocatas[$key]["ruta"];
-
-
-        echo "<h1> $nom </h1>";
-        echo "<h2> $preu </h2>";
-        echo "<img src=$ruta/>";
-        echo "<hr>";
+        echo"<div><h1> $nom </h1>
+                <h2> $preu </h2>
+                <img src=$ruta width='200px'/>
+                <hr></div>
+            ";
     }
+
     ?>
+
+    </form>
+    <hr><hr><hr>
+
+    <form id='tarda'>
+    <?php
+
+    $bocatasTarda = file_get_contents("../jsons/menuTarda.json");
+    $arrayBocatasTarda = json_decode($bocatasTarda, true);
+
+
+    echo"<h1>aqui empieza el menu de tardes</h1>";
+
+
+    foreach ($arrayBocatasTarda as $key => $value){
+        $nom = $arrayBocatasTarda[$key]["nom"];
+        $preu = $arrayBocatasTarda[$key]["preu"];
+        $ruta = $arrayBocatasTarda[$key]["ruta"];
+
+        echo"<div><h1> $nom </h1>
+                <h2> $preu </h2>
+                <img src=$ruta width='200px'/>
+                <hr></div>
+            ";
+    }
+
+    ?>
+    </form>
+
+
+
     <h1>Menu</h1>
     <form action="comandav.php">
         <br><br>
