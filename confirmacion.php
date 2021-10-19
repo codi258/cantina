@@ -13,6 +13,10 @@
 </form>
 <?php
 echo "Confimación";
+<form action="inicio.php">
+        <br><br>
+        <input type="submit" name="boton" value="Inicio">
+    </form>
 ?>
 </body>
 
