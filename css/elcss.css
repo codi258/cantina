@@ -1,22 +1,19 @@
 
 
 header{
-    background-color: aqua;
+    background-color: #A7E9FF;
     padding: 20px;
     font-size: 20px;
 }
 
 footer{
-    background-color: aqua;
+    background-color: #DCDCDC;
     padding: 20px;
     font-size: 20px;
 }
-
 img{
-    width: 20%;
+    width: 15%;
 }
-
-
 .imag{
     width: 650px;
     display: flex;
@@ -33,5 +30,5 @@ img{
 }
 .flex{
     display: flex;
-    border: black solid 2px;
+   
 }
