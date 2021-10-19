@@ -4,13 +4,10 @@
         <link rel="stylesheet" href="elcss.css">
     </head>
     <body>
-
-        <?php
-            echo "footer";
-        ?>
-
+    <div>
+        <i>Admin</i>
+    </div>
     </body>
-
 </html>
 
 
