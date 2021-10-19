@@ -1,7 +1,7 @@
 <html>
     <head>
         <title>Inicio</title>
-        <link rel="stylesheet" href="elcss.css">
+        <link rel="stylesheet" href="/css/elcss.css">
     </head>
     <body>
     <div>

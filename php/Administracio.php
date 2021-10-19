@@ -1,12 +1,12 @@
 <html>
     <head>
         <title>Inici</title>
-        <link rel="stylesheet" href="elcss.css">
+        <link rel="stylesheet" href="/css/elcss.css">
     </head>
     <body>
     <header>
         <?php
-        require_once("Header.php");
+             include 'Header.php';
         ?>
     </header>
 
@@ -21,7 +21,7 @@
     </form>
     <footer>
         <?php
-        require_once("Footer.php")
+        include 'Footer.php'
 
         ?>
     </footer>

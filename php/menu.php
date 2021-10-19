@@ -1,16 +1,13 @@
 <html>
 <head>
     <title>Inici</title>
-    <link rel="stylesheet" href="elcss.css">
-
-
-
+    <link rel="stylesheet" href="/css/elcss.css">
 
 </head>
 <body>
     <header>
         <?php
-            require_once("Header.php");
+        include 'Header.php';
         ?>
     </header>
 
@@ -18,7 +15,7 @@
     <form id='mati'>
 
     <?php
-    $bocatasMati = file_get_contents("../jsons/menuMati.json");
+    $bocatasMati = file_get_contents("../json/menuMati.json");
     $arrayBocatasMati = json_decode($bocatasMati, true);
     foreach ($arrayBocatasMati as $key => $value){
         $nom = $arrayBocatasMati[$key]["nom"];
@@ -42,7 +39,7 @@
     <form id='tarda'>
     <?php
 
-    $bocatasTarda = file_get_contents("../jsons/menuTarda.json");
+    $bocatasTarda = file_get_contents("../json/menuTarda.json");
     $arrayBocatasTarda = json_decode($bocatasTarda, true);
 
 
@@ -81,7 +78,7 @@
     </form>
     <footer>
         <?php
-        require_once("Footer.php")
+            include 'Footer.php'
         ?>
     </footer>
 

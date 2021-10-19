@@ -6,7 +6,7 @@
 <body>
 <header>
     <?php
-    require_once("Header.php");
+     include 'Header.php';
     ?>
 </header>
 <h1>Tu pedido</h1>
@@ -25,7 +25,7 @@ echo "Confimación";
 </form>
 <footer>
     <?php
-    require_once("Footer.php")
+    include 'Footer.php'
 
     ?>
 </footer>

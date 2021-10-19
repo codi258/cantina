@@ -4,7 +4,7 @@
     <body>
         <header>
             <?php
-            require_once("Header.php");
+            include 'Header.php';
             ?>
         </header>
 
@@ -17,7 +17,7 @@
         </form>
         <footer>
             <?php
-            require_once("Footer.php")
+            include 'Footer.php'
 
             ?>
         </footer>
