@@ -18,6 +18,10 @@ echo "Confimación";
         <input type="submit" name="boton" value="Inicio">
     </form>
 ?>
+<form action="inicio.php">
+        <br><br>
+        <input type="submit" name="boton" value="Inicio">
+    </form>
 </body>
 
 
