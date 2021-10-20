@@ -52,7 +52,7 @@
         $preu = $arrayBocatasTarda[$key]["preu"];
         $ruta = $arrayBocatasTarda[$key]["ruta"];
 
-        echo "<div xmlns=\"http://www.w3.org/1999/html\"><h1> $nom </h1>
+        echo "<div><h1> $nom </h1>
                 <h2> $preu </h2>
                 <img src=$ruta width='200px'/>
                 <input type='button' value='-' class='afegir'>           
