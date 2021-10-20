@@ -30,11 +30,9 @@
                 <hr></div>
             ";
     }
-
     ?>
 
     </form>
-    <hr><hr><hr>
 
     <form id='tarda'>
     <?php
@@ -61,7 +59,6 @@
                 <hr></div>
             ";
     }
-
     ?>
     </form>
 
@@ -126,5 +123,6 @@
         });
 
     </script>
+    <script src="/javascript/horaDia.js"></script>
 </body>
 </html>
