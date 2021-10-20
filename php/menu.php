@@ -56,13 +56,12 @@
                 <h2> $preu </h2>
                 <img src=$ruta width='200px'/>
                 <input type='button' value='-' class='treure'>           
-                <input type='text' id='$id' value='0'>
+                <input type='text' idProducte='$id' value='0'>
                 <input type='button' value='+' class='afegir'>
                 <hr></div>
             ";
     }
     ?>
-        <h1>aAAAA</h1>
     </form>
 
 
@@ -83,7 +82,7 @@
     </footer>
 
     <script>
-        let form = document.getElementById('mati');
+        let form = document.getElementById('tarda');
 
         form.addEventListener('click', function(e) {
 
@@ -105,8 +104,8 @@
 
             function afegirProducte($id){
                 //alert("Has afegit un element del producte " + idProducte);
-                if(document.getElementById("i" + $id).value>=0)
-                    document.getElementById("i" + $id).value++;
+                if(document.getElementById("i" + idProducte).value>=0)
+                    document.getElementById("i" + idProducte).value++;
             }
 
             function treureProducte(idProducte){
