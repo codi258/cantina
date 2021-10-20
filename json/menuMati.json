@@ -1,34 +1,40 @@
 [{
+  "id": "8",
   "nom": "Bocadillo de jamón y queso",
   "preu": "1.5€",
   "torn": "pati",
   "ruta": "/imagenes/jamonqueso.png"
 },
 {
+  "id": "9",
 "nom": "Bocadillo de jamón serrano y queso",
 "preu": "2.5€",
 "torn": "pati",
 "ruta": "/imagenes/jamonserranoqueso.png"
 },
 {
+  "id": "10",
 "nom": "Bocadillo de Pollo",
 "preu": "3.5€",
 "torn": "pati",
 "ruta": "/imagenes/pollocarbonara.png"
 },
 {
+  "id": "11",
 "nom": "Serranito",
 "preu": "4.5€",
 "torn": "pati",
 "ruta": "/imagenes/serranito.png"
 },
 {
+  "id": "12",
 "nom": "Bocadillo de chorizo",
 "preu": "2.5€",
 "torn": "pati",
 "ruta": "/imagenes/chorizo.png"
 },
   {
+    "id": "13",
     "nom": "Café con leche",
     "preu": "1.2€",
     "torn": "pati",
@@ -36,6 +42,7 @@
 
   },
   {
+    "id": "14",
     "nom": "Agua",
     "preu": "1€",
     "torn": "pati",
@@ -43,6 +50,7 @@
 
   },
   {
+    "id": "15",
     "nom": "Refrescos",
     "preu": "1.6€",
     "torn": "pati",

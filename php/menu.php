@@ -1,4 +1,4 @@
-<html>
+<html lang="es">
 <head>
     <title>Inici</title>
     <link rel="stylesheet" href="/css/elcss.css">
@@ -18,6 +18,7 @@
     $bocatasMati = file_get_contents("../json/menuMati.json");
     $arrayBocatasMati = json_decode($bocatasMati, true);
     foreach ($arrayBocatasMati as $key => $value){
+        $id = $arrayBocatasMati[$key]["id"];
         $nom = $arrayBocatasMati[$key]["nom"];
         $preu = $arrayBocatasMati[$key]["preu"];
         $ruta = $arrayBocatasMati[$key]["ruta"];
@@ -25,8 +26,9 @@
         echo"<div><h1> $nom </h1>
                 <h2> $preu </h2>
                 <img src=$ruta width='200px'/>
-                <input type='button' value='-'>
-                <input type='button' value='+'>
+                <input type='button' value='-' class='treure'>           
+                <input type='text' id='$id' value='0'>
+                <input type='button' value='+' class='afegir'>
                 <hr></div>
             ";
     }
@@ -53,13 +55,14 @@
         echo "<div><h1> $nom </h1>
                 <h2> $preu </h2>
                 <img src=$ruta width='200px'/>
-                <input type='button' value='-' class='afegir'>           
-                <input type='text' id='$id' value=''>
-                <input type='button' value='+' class='treure'>
+                <input type='button' value='-' class='treure'>           
+                <input type='text' id='$id' value='0'>
+                <input type='button' value='+' class='afegir'>
                 <hr></div>
             ";
     }
     ?>
+        <h1>aAAAA</h1>
     </form>
 
 
@@ -100,10 +103,10 @@
             }
             console.log(e.target);
 
-            function afegirProducte(idProducte){
+            function afegirProducte($id){
                 //alert("Has afegit un element del producte " + idProducte);
-                if(document.getElementById("i" + idProducte).value>=0)
-                    document.getElementById("i" + idProducte).value++;
+                if(document.getElementById("i" + $id).value>=0)
+                    document.getElementById("i" + $id).value++;
             }
 
             function treureProducte(idProducte){

@@ -13,14 +13,14 @@
     "ruta": "/imagenes/jamonserranoqueso.png"
   },
   {
-    "id": "2",
+    "id": "3",
     "nom": "Bocadillo de chorizo",
     "preu": "2.5€",
     "torn": "tarda",
     "ruta": "/imagenes/chorizo.png"
   },
   {
-    "id": "2",
+    "id": "4",
     "nom": "Café con leche",
     "preu": "1.2€",
     "torn": "tarda",
@@ -28,7 +28,7 @@
 
   },
   {
-    "id": "2",
+    "id": "5",
     "nom": "Agua",
     "preu": "1€",
     "torn": "tarda",
@@ -36,7 +36,7 @@
 
   },
   {
-    "id": "2",
+    "id": "6",
     "nom": "Refrescos",
     "preu": "1.6€",
     "torn": "tarda",
@@ -44,7 +44,7 @@
 
   },
   {
-    "id": "2",
+    "id": "7",
     "nom": "Donuts",
     "preu": "1€",
     "torn": "tarda",
