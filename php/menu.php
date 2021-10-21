@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <title>Inici</title>
@@ -23,11 +24,11 @@
         $preu = $arrayBocatasMati[$key]["preu"];
         $ruta = $arrayBocatasMati[$key]["ruta"];
 
-        echo"<div><h1> $nom </h1>
+        echo"<div id='$id'><h1> $nom </h1>
                 <h2> $preu </h2>
                 <img src=$ruta width='200px'/>
                 <input type='button' value='-' class='treure'>           
-                <input type='text' id='$id' value='0'>
+                <input type='text' id=i$id value='0'>
                 <input type='button' value='+' class='afegir'>
                 <hr></div>
             ";
@@ -52,11 +53,11 @@
         $preu = $arrayBocatasTarda[$key]["preu"];
         $ruta = $arrayBocatasTarda[$key]["ruta"];
 
-        echo "<div><h1> $nom </h1>
+        echo "<div id='$id'><h1> $nom </h1>
                 <h2> $preu </h2>
                 <img src=$ruta width='200px'/>
                 <input type='button' value='-' class='treure'>           
-                <input type='text' id='$id' value='0'>
+                <input type='text' id=i$id value='0'>
                 <input type='button' value='+' class='afegir'>
                 <hr></div>
             ";
@@ -103,10 +104,10 @@
             }
             console.log(e.target);
 
-            function afegirProducte($id){
+            function afegirProducte(idProducte){
                 //alert("Has afegit un element del producte " + idProducte);
-                if(document.getElementById("i" + $id).value>=0)
-                    document.getElementById("i" + $id).value++;
+                document.getElementById("i" + idProducte).value++;
+
             }
 
             function treureProducte(idProducte){
@@ -119,9 +120,6 @@
 
                 }
             }
-
-
-
 
         });
 
