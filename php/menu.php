@@ -1,5 +1,5 @@
 <?php
-    if(isset($_COOKIE["COMANDA"])){
+    if(isset($_COOKIE["comanda"])){
         header('Location:error.php');
     }
 ?>

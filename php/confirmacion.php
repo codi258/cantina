@@ -26,12 +26,12 @@ echo "Confimación";
 </form>
 <?php
     echo"<br>";
-if(isset($_COOKIE["Limitador"])){
+if(isset($_COOKIE["comanda"])){
     echo"La cookie ya existe";
 }else{
     echo"Si no existe, la creamos";
     //Se crea cookie con duracion de
-    setcookie("Limitador", 54321, time()+10,"/");
+    setcookie("comanda", 54321, time()+10,"/");
 }
 ?>
 <footer>
