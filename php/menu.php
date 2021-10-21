@@ -63,7 +63,7 @@
             ";
     }
     ?>
-        <h1>aAAAA</h1>
+
     </form>
 
 
@@ -115,8 +115,51 @@
                     document.getElementById("i" + idProducte).value--;
                 }
                 id (document.getElementById("i" + idProducte).value==0);{
+                  console.log("#" + idProducte + " .treure");
+                    document.querySelectorAll("#" + idProducte+" .treure")[0];
+
+
+                }
+            }
+
+        });
+
+    </script>
+    <script>
+        let formT = document.getElementById('tarda');
+
+        formT.addEventListener('click', function(e) {
+
+            if(e.target.classList.contains('afegir')){
+
+                console.log("Has hecho click en afegir")
+                console.log(e.target);
+
+                //imprimo el ID del padre de quien ha generado el evento
+                console.log(e.target.parentNode.id)
+                //llamo a la funcion afegir producte
+                afegirProducte(e.target.parentNode.id);
+            }
+            else if (e.target.classList.contains('treure')){
+                console.log("Has hecho click en treure");
+                treureProducte(e.target.parentNode.id);
+            }
+            console.log(e.target);
+
+            function afegirProducte(idProducte){
+                //alert("Has afegit un element del producte " + idProducte);
+                document.getElementById("i" + idProducte).value++;
+
+            }
+
+            function treureProducte(idProducte){
+                if(document.getElementById("i" + idProducte).value>0){
+                    document.getElementById("i" + idProducte).value--;
+                }
+                id (document.getElementById("i" + idProducte).value==0);{
                     console.log("#" + idProducte + " .treure");
                     document.querySelectorAll("#" + idProducte+" .treure")[0];
+
 
                 }
             }
