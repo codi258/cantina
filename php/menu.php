@@ -19,71 +19,74 @@
 
 
     <form id='mati'>
+        <div class="grid-container">
+            <?php
+            $bocatasMati = file_get_contents("../json/menuMati.json");
+            $arrayBocatasMati = json_decode($bocatasMati, true);
+            foreach ($arrayBocatasMati as $key => $value){
+                $id = $arrayBocatasMati[$key]["id"];
+                $nom = $arrayBocatasMati[$key]["nom"];
+                $preu = $arrayBocatasMati[$key]["preu"];
+                $ruta = $arrayBocatasMati[$key]["ruta"];
 
-    <?php
-    $bocatasMati = file_get_contents("../json/menuMati.json");
-    $arrayBocatasMati = json_decode($bocatasMati, true);
-    foreach ($arrayBocatasMati as $key => $value){
-        $id = $arrayBocatasMati[$key]["id"];
-        $nom = $arrayBocatasMati[$key]["nom"];
-        $preu = $arrayBocatasMati[$key]["preu"];
-        $ruta = $arrayBocatasMati[$key]["ruta"];
+                echo"<div id='$id' class='grid-element'>
+                        <h1> $nom </h1>
+                        <h2> $preu </h2>
+                        <img src=$ruta width='200px'/>
+                        <input type='button' value='-' class='treure'>           
+                        <input type='text' class='cajaCantidades' id=i$id value='0'>
+                        <input type='button' value='+' class='afegir'>
+                        <hr>
+                        </div>
+                    ";
+                    }
+            ?>
+        </div>
 
-        echo"<div id='$id'><h1> $nom </h1>
-                <h2> $preu </h2>
-                <img src=$ruta width='200px'/>
-                <input type='button' value='-' class='treure'>           
-                <input type='text' class='cajaCantidades' id=i$id value='0'>
-                <input type='button' value='+' class='afegir'>
-                <hr></div>
-            ";
-
-            }
-    ?>
-    <input type="hidden" value="{EL JSONA DE MARRAS}">
+        <input type="hidden" value="{EL JSONA DE MARRAS}">
     </form>
 
+
+
     <form id='tarda'>
-    <?php
+        <div class="grid-container">
 
-    $bocatasTarda = file_get_contents("../json/menuTarda.json");
-    $arrayBocatasTarda = json_decode($bocatasTarda, true);
+            <?php
+            $bocatasTarda = file_get_contents("../json/menuTarda.json");
+            $arrayBocatasTarda = json_decode($bocatasTarda, true);
+            echo"<h1>aqui empieza el menu de tardes</h1>";
+            foreach ($arrayBocatasTarda as $key => $value){
+                $id = $arrayBocatasTarda[$key]["id"];
+                $nom = $arrayBocatasTarda[$key]["nom"];
+                $preu = $arrayBocatasTarda[$key]["preu"];
+                $ruta = $arrayBocatasTarda[$key]["ruta"];
 
-
-    echo"<h1>aqui empieza el menu de tardes</h1>";
-
-
-    foreach ($arrayBocatasTarda as $key => $value){
-        $id = $arrayBocatasTarda[$key]["id"];
-        $nom = $arrayBocatasTarda[$key]["nom"];
-        $preu = $arrayBocatasTarda[$key]["preu"];
-        $ruta = $arrayBocatasTarda[$key]["ruta"];
-
-        echo "<div id='$id'><h1> $nom </h1>
-                <h2> $preu </h2>
-                <img src=$ruta width='200px'/>
-                <input type='button' value='-' class='treure'>           
-                <input type='text' class='cajaCantidades' id=i$id value='0'>
-                <input type='button' value='+' class='afegir'>
-                <hr></div>
-            ";
-    }
-    ?>
+                echo "<div id='$id' class='grid-element'>
+                        <h1> $nom </h1>
+                        <h2> $preu </h2>
+                        <img src=$ruta width='200px'/>
+                        <input type='button' value='-' class='treure'>           
+                        <input type='text' class='cajaCantidades' id=i$id value='0'>
+                        <input type='button' value='+' class='afegir'>
+                        <hr>
+                        </div>
+                    ";
+            }
+            ?>
+        </div>
         <input type="hidden" value="{EL JSONA DE MARRAS DE TARDES}">
     </form>
 
-
-
-    <h1>Menu</h1>
-    <form action="comandav.php">
-        <br><br>
-        <input type="submit" name="boton" value="Validació comanda">
-    </form>
-    <form action="inicio.php">
-        <br><br>
-        <input type="submit" name="boton" value="Inicio">
-    </form>
-
+    <div class="buttons">
+        <form action="comandav.php">
+            <br><br>
+            <input type="submit" name="boton" value="Validació comanda">
+        </form>
+        <form action="inicio.php">
+            <br><br>
+            <input type="submit" name="boton" value="Inicio">
+        </form>
+    </div>
     <div id="ticket"></div>
     <footer>
         <?php
@@ -92,8 +95,6 @@
     </footer>
 
     <script>
-
-
         function actualizarTicket() {
             var ticket;
             //selecciono todos los  GETELEMENTSBYCLASS DE cajaCAntidades
