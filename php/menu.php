@@ -94,19 +94,25 @@
     <script>
 
 
-        function actualizarTicket(){
-
+        function actualizarTicket() {
+            var ticket;
             //selecciono todos los  GETELEMENTSBYCLASS DE cajaCAntidades
-
-
+            ticket = document.getElementsByClassName("cajaCantidades");
+            var y;
             //con un bucle recorreo todas las cajas
+            for(y=0;y<ticket.length;y++){
+                ticket[y].innerHTML="objetos"
+            }
 
 
-            //de aquellas que tienen una cantidad diferente de 0 la muestro
+            //if(valueOf(document.getElementsByClassName("cajaCantidades"))>0){}  no se AAAAAAAAAAAAAAAAAAAA
 
-            //
-            document.getElementById("ticket").innerHTML = "el resultado del ticker"
+               //de aquellas que tienen una cantidad diferente de 0 la muestro
+
         }
+            actualizarTicket();
+            document.getElementById("ticket").innerHTML = "el resultado del ticket"
+
 
         let form = document.getElementById('mati');
 
