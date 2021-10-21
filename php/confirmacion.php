@@ -38,6 +38,7 @@ if(isset($_COOKIE["Limitador"])){
     include 'Footer.php'
 
     ?>
+
 </footer>
 </body>
 </html>
