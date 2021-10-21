@@ -63,13 +63,18 @@
             //HACEMOS ESTO PARA QUE NO HAGA EL SUBMIT
             e.preventDefault();
         }
+        //2. COMPROBAMOS QUE EL CORREO ES DEL TIPO XXXX@INSPEDRALBES.cat
 
-        //2. COMPRAOBAMOS QUE EL TELEFONO TUIENE UNA LOGNITUD DE 9
+         else if (document.getElementById("correu").value!="(/^([\da-z_\.-]+)@inspedralbes\.cat$/)"){
+            alert("Formato de correo incorrecto");
+            e.preventDefault();
+        }
 
-        //3. COMPROBAMOS QUE EL CORREO ES DEL TIPO XXXX@INSPEDRALBES.cAT
-
-
-
+        //3. COMPRAOBAMOS QUE EL TELEFONO TUIENE UNA LOGNITUD DE 9
+        else if (document.getElementById("telefon").value.length!=9){
+            alert("El número de teléfono debe componerse de 9 dígitos");
+            e.preventDefault();
+        }
 
     })
 
