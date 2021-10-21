@@ -31,7 +31,7 @@ if(isset($_COOKIE["comanda"])){
 }else{
     echo"Si no existe, la creamos";
     //Se crea cookie con duracion de
-    setcookie("comanda", 54321, time()+10,"/");
+    setcookie("comanda", 54321); // time()+10,"/" esto cuando dejes de hacer pruebas lo pones de nuevo dentro del parentesis
 }
 ?>
 <footer>
