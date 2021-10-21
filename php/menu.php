@@ -1,3 +1,8 @@
+<?php
+    if(isset($_COOKIE["COMANDA"])){
+        header('Location:error.php');
+    }
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
