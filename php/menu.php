@@ -33,13 +33,14 @@
                 <h2> $preu </h2>
                 <img src=$ruta width='200px'/>
                 <input type='button' value='-' class='treure'>           
-                <input type='text' id=i$id value='0'>
+                <input type='text' class='cajaCantidades' id=i$id value='0'>
                 <input type='button' value='+' class='afegir'>
                 <hr></div>
             ";
-    }
-    ?>
 
+            }
+    ?>
+    <input type="hidden" value="{EL JSONA DE MARRAS}">
     </form>
 
     <form id='tarda'>
@@ -62,13 +63,13 @@
                 <h2> $preu </h2>
                 <img src=$ruta width='200px'/>
                 <input type='button' value='-' class='treure'>           
-                <input type='text' id=i$id value='0'>
+                <input type='text' class='cajaCantidades' id=i$id value='0'>
                 <input type='button' value='+' class='afegir'>
                 <hr></div>
             ";
     }
     ?>
-
+        <input type="hidden" value="{EL JSONA DE MARRAS DE TARDES}">
     </form>
 
 
@@ -82,6 +83,8 @@
         <br><br>
         <input type="submit" name="boton" value="Inicio">
     </form>
+
+    <div id="ticket"></div>
     <footer>
         <?php
             include 'Footer.php'
@@ -89,6 +92,22 @@
     </footer>
 
     <script>
+
+
+        function actualizarTicket(){
+
+            //selecciono todos los  GETELEMENTSBYCLASS DE cajaCAntidades
+
+
+            //con un bucle recorreo todas las cajas
+
+
+            //de aquellas que tienen una cantidad diferente de 0 la muestro
+
+            //
+            document.getElementById("ticket").innerHTML = "el resultado del ticker"
+        }
+
         let form = document.getElementById('mati');
 
         form.addEventListener('click', function(e) {
@@ -129,8 +148,8 @@
 
         });
 
-    </script>
-    <script>
+
+
         let formT = document.getElementById('tarda');
 
         formT.addEventListener('click', function(e) {
@@ -144,10 +163,12 @@
                 console.log(e.target.parentNode.id)
                 //llamo a la funcion afegir producte
                 afegirProducte(e.target.parentNode.id);
+                actualizarTicket();
             }
             else if (e.target.classList.contains('treure')){
                 console.log("Has hecho click en treure");
                 treureProducte(e.target.parentNode.id);
+                actualizarTicket();
             }
             console.log(e.target);
 
