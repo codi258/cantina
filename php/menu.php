@@ -43,7 +43,7 @@
             ?>
         </div>
 
-        <input type="hidden" value="{EL JSONA DE MARRAS}">
+
     </form>
 
 
@@ -72,9 +72,10 @@
                         </div>
                     ";
             }
+            echo "<input type='hidden' id='json' value='".$bocatasTarda."'>";
             ?>
         </div>
-        <input type="hidden" value="{EL JSONA DE MARRAS DE TARDES}">
+
     </form>
 
     <div class="buttons">
@@ -95,15 +96,19 @@
     </footer>
 
     <script>
-        function actualizarTicket() {
-            var ticket;
+        function actualizarTicket(datosMenu) {
+            let ticket = document.getElementById("ticket");
             //selecciono todos los  GETELEMENTSBYCLASS DE cajaCAntidades
             ticket = document.getElementsByClassName("cajaCantidades");
-            var y;
             //con un bucle recorreo todas las cajas
-            for(y=0;y<ticket.length;y++){
-                ticket[y].innerHTML="objetos"
+            let text = "";
+            for(let y=0;y<ticket.length;y++){
+                if(ticket[y].value != 0){
+                    text += "Nombre:  " + datosMenu[ticket[y].parentNode.id].nom;
+                }
             }
+
+            ticket.innerHTML = text;
 
 
             //if(valueOf(document.getElementsByClassName("cajaCantidades"))>0){}  no se AAAAAAAAAAAAAAAAAAAA
@@ -111,21 +116,21 @@
                //de aquellas que tienen una cantidad diferente de 0 la muestro
 
         }
-            actualizarTicket();
-            document.getElementById("ticket").innerHTML = "el resultado del ticket"
+            //actualizarTicket(menuList);
+            //document.getElementById("ticket").innerHTML = "el resultado del ticket es" ;
 
 
-        let form = document.getElementById('mati');
+       /* let form = document.getElementById('mati');
 
         form.addEventListener('click', function(e) {
 
             if(e.target.classList.contains('afegir')){
 
-                console.log("Has hecho click en afegir")
+                console.log("Has hecho click en afegir") //cuando acabes se borran los conosle logs
                 console.log(e.target);
 
                 //imprimo el ID del padre de quien ha generado el evento
-                console.log(e.target.parentNode.id)
+                //console.log(e.target.parentNode.id)
                 //llamo a la funcion afegir producte
                 afegirProducte(e.target.parentNode.id);
             }
@@ -153,12 +158,13 @@
                 }
             }
 
-        });
+        }); */
 
 
 
         let formT = document.getElementById('tarda');
-
+        menuList = JSON.parse(document.getElementById("json").value);
+        console.log(menuList);
         formT.addEventListener('click', function(e) {
 
             if(e.target.classList.contains('afegir')){
@@ -170,12 +176,12 @@
                 console.log(e.target.parentNode.id)
                 //llamo a la funcion afegir producte
                 afegirProducte(e.target.parentNode.id);
-                actualizarTicket();
+                actualizarTicket(menuList);
             }
             else if (e.target.classList.contains('treure')){
                 console.log("Has hecho click en treure");
                 treureProducte(e.target.parentNode.id);
-                actualizarTicket();
+                actualizarTicket(menuList);
             }
             console.log(e.target);
 
@@ -201,5 +207,6 @@
 
     </script>
     <script src="/javascript/horaDia.js"></script>
+    
 </body>
 </html>
