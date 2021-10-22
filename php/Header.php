@@ -6,9 +6,7 @@
     <body>
     <div class="flex">
         <div class="imag">
-            <a href="inicio.php">
-                <img src="/imagenes/mosca_transp.png">
-            </a>
+            <img src="/imagenes/mosca_transp.png">
         </div>
         <div class="mid">
             <h1>Cantina</h1>

@@ -1,88 +1,15 @@
 
-/*menu*/
+
 header{
-    background-color: #A7E9FF;
+    background-color: aqua;
     padding: 20px;
     font-size: 20px;
     text-align: center;
 }
 footer{
-    background-color:  #DCDCDC;
+    background-color: aqua;
     padding: 20px;
     font-size: 20px;
     text-align: center;
-}
-.buttons{
-    text-align: center;
-}
-
-/*esto es de menú*/
-.grid-container{
-    display: grid;
-    grid-gap: 50px;
-    grid-template-columns: auto auto auto;
-    background-color: #2196F3;
-    padding: 10px;
-}
-.grid-element{
-    background-color: lightgrey;
-    border: 1px solid black;
-    padding: 20px;
-    font-size: 30px;
-    text-align: center;
-
-}
-/*Header*/
-img{
-    width: 70px;
-}
-.flex{
-    display: grid;
-    grid-template-columns: auto 1fr 1fr;
-    align-content: center;
-}
-
-.imag{
-    width: 70px;
-    justify-self: left;
-    align-self: center;
-}
-.left{
-    justify-self: center;
-    align-self: end;
-    padding-left: 100px;
-}
-.mid{
-    justify-self: right;
-    align-self: center;
-    padding-left: 150px;
-}
-
-/*footer*/
-.footer{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-
-.t1{
-    justify-self: left;
-    align-self: center;
-}
-.t2{
-    justify-self: left;
-    align-self: center;
-}
-
-.fa-instagram{
-    background: #DCDCDC;
-    color: black;
-}
-.fa-twitter{
-    background: #DCDCDC;
-    color: black;
-}
-.fa-linkedin{
-    background: #DCDCDC;
-    color: black;
 }
 
