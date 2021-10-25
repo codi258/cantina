@@ -18,6 +18,9 @@ footer{
 .buttons{
     text-align: center;
 }
+.inicio{
+    text-align: center;
+}
 
 /*esto es de menú*/
 .grid-container{
@@ -94,4 +97,8 @@ img{
 .fa-linkedin{
     background: #DCDCDC;
     color: black;
+}
+/*Es el form de comandav*/
+.formDades{
+    text-align: center;
 }
