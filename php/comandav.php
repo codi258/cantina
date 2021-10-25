@@ -55,6 +55,33 @@
                 </footer>
 
                 <script>
+
+                    const err=["Introdueix nom", "Introdueix telefon", "Teléfon no numeric", "Numero de telefon incorrecte, ha de contenir 9 digits","Introdueix un email", "Email incorrecre(xxx@inspedralbes.cat)"];
+                    window.onload=function(){
+                        document.getElementById("nom").focus();
+                    }
+
+                    document.getElementById("comprar").addEventListener("click", function (e){
+
+                        var n, text="", error = 0;
+
+
+
+                    });
+
+                    function errNom(){
+
+                        return (document.getElementById("nom").value==="") ? true : false;
+                    }
+
+                    function errMail(){
+                        let mail
+
+
+                    }
+
+
+
                     document.getElementById("comprar").addEventListener("click", function(e){
                         //1. COMPROBAMOS QUE EL NOMBRE ESTA OK
                         if (document.getElementById("nom").value==""){
