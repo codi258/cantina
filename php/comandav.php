@@ -55,53 +55,63 @@
                 </footer>
 
                 <script>
+                    window.onload=function (){
 
-                    const err=["Introdueix nom", "Introdueix telefon", "Teléfon no numeric", "Numero de telefon incorrecte, ha de contenir 9 digits","Introdueix un email", "Email incorrecre(xxx@inspedralbes.cat)"];
-                    window.onload=function(){
                         document.getElementById("nom").focus();
+
                     }
+                    document.getElementById("comprar").addEventListener("click", function(e){
 
-                    document.getElementById("comprar").addEventListener("click", function (e){
+                        function comprovarNom() {
+                            if (document.getElementById("nom").value == "") {
+                                return 1;
+                            }else if(!( /^[A-Za-zƒŠŒŽšœžŸÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõöøùúûüýþÿ]*$/.exec(document.getElementById("nom").value))){
+                                return 2;
+                            }
+                        }
 
-                        var n, text="", error = 0;
+                        function comprovarTel() {
+                            if (document.getElementById("telefon").value == "") {
+                                return 1;
+                            } else if (!(/^[0-9]+$/.exec(document.getElementById("telefon").value))) {
+                                return 2;
+                            }
+                        }
+
+                        function comprovarEmail(){
+                            if(document.getElementById("correu").value==""){
+                                return 1;
+                            }else if(!(/^([a-zA-Z0-9._-]+)@inspedralbes.cat$/.exec(document.getElementById("correu").value))){
+                                return 2;
+                            }
+                        }
 
 
 
+                        if(comprovarNom()==1){
+                            alert("Introdueix un nom");
+                            e.preventDefault();
+                        }else if(comprovarNom()==2){
+                            alert("El nombre solo se debe estar compuesto por una palabra que contenga no más de las 27 letras del abecedario");
+                            e.preventDefault();
+                        }
+                        if(comprovarTel()==1){
+                            alert("Debes intorducir un número");
+                            e.preventDefault();
+                        }else if(comprovarTel()==2){
+                            alert("El número debe contener estrictamente 9 dígitos");
+                            e.preventDefault();
+                        }
+                        if(comprovarEmail()==1){
+                            alert("Este campo no puede estar vacío");
+                            e.preventDefault();
+                        }else if (comprovarEmail()==2){
+                            alert("Formato de email incorrecto (xxx@inspedralbes.cat)");
+                            e.preventDefault();
+                        }
                     });
 
-                    function errNom(){
 
-                        return (document.getElementById("nom").value==="") ? true : false;
-                    }
-
-                    function errMail(){
-                        let mail
-
-
-                    }
-
-
-
-                    document.getElementById("comprar").addEventListener("click", function(e){
-                        //1. COMPROBAMOS QUE EL NOMBRE ESTA OK
-                        if (document.getElementById("nom").value==""){
-                            alert("no puede estar vacio");
-                            //HACEMOS ESTO PARA QUE NO HAGA EL SUBMIT
-                            e.preventDefault();
-                        }
-                        //2. COMPROBAMOS QUE EL CORREO ES DEL TIPO XXXX@INSPEDRALBES.cAT
-                        else if(document.getElementById("correu").value.match!=("/^([a-zA-Z0-9._-]+)@inspedralbes.cat$/")){
-                            alert("Correo Incorrecto");
-
-                            e.preventDefault();
-
-                        }
-                        //1. COMPRAOBAMOS QUE EL TELEFONO TUIENE UNA LOGNITUD DE 9
-                        else if(document.getElementById("telefon").value.length!=9){
-                            alert("El número debe contener nueve dígitos");
-                            e.preventDefault();
-                        }
-                    })
                 </script>
             </div>
     </body>
